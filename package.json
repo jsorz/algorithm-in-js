@@ -1,0 +1,60 @@
+{
+  "name": "algorithm-in-js",
+  "version": "1.0.0",
+  "description": "algorithm-in-js",
+  "scripts": {
+    "dev": "webpack-dev-server --config build/webpack.conf.js --mode development",
+    "build": "npm run clear && NODE_ENV=production webpack --config build/webpack.conf.js --mode production",
+    "build:ssr": "npm run clear && webpack --config build/webpack.server.conf.js --mode production",
+    "eslint": "eslint --ext .js src",
+    "clear": "rimraf dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "pre-commit": [
+    "eslint"
+  ],
+  "keywords": [
+    "data-structure",
+    "algorithm"
+  ],
+  "author": "jsorz",
+  "repository": "todo",
+  "license": "MIT",
+  "dependencies": {
+    "element-react": "^1.4.10",
+    "element-theme-default": "^1.4.13",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-elemefe": "^0.3.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.1.0",
+    "mini-css-extract-plugin": "^0.2.0",
+    "node-sass": "^4.8.3",
+    "pre-commit": "^1.2.2",
+    "react-hot-loader": "^4.0.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.3.0",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  }
+}

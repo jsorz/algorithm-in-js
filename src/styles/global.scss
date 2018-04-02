@@ -1,0 +1,18 @@
+@import './theme.scss';
+$font: 20px;
+
+body {
+  font-size: $font;
+}
+
+.page-container {
+  $asideWidth: 200px;
+  .aside {
+    width: $asideWidth;
+    float: left;
+  }
+  .main {
+    margin-left: $asideWidth;
+    padding: 0 20px;
+  }
+}
