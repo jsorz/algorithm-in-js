@@ -10,3 +10,7 @@ export function defaultCompare(a, b) {
   }
   return a < b ? Compare.LT : Compare.GT;
 };
+
+export function defaultEquals(a, b) {
+  return a === b;
+};
