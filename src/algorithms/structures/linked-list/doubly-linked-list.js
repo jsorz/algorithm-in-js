@@ -2,6 +2,7 @@ import { defaultEquals } from '../../utils/compare';
 import LinkedList from './index';
 import { DoublyNode } from './model';
 
+// 双向链表
 export default class DoublyLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {
     super(equalsFn);

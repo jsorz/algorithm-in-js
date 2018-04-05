@@ -2,6 +2,7 @@ import { defaultToString } from '../../utils/string';
 import LinkedList from '../linked-list/index';
 import { ValuePair } from './model';
 
+// hash冲突：分离链表
 export default class HashTableSeparateChaining {
   constructor(toStrFn = defaultToString) {
     this.toStrFn = toStrFn;

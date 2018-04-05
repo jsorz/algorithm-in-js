@@ -2,6 +2,7 @@ import { defaultEquals } from '../../utils/compare';
 import LinkedList from './index';
 import { Node } from './model';
 
+// 循环链表
 export default class CircularLinkedList extends LinkedList {
   constructor(equalsFn = defaultEquals) {
     super(equalsFn);
