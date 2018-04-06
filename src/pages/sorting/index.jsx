@@ -4,6 +4,7 @@ import './style.scss';
 import Bubble from 'src/algorithms/sorting/bubble';
 import Selection from 'src/algorithms/sorting/selection';
 import Insertion from 'src/algorithms/sorting/insertion';
+import ShellShort from 'src/algorithms/sorting/shell-sort';
 import Quick from 'src/algorithms/sorting/quick';
 import { randomArray } from 'src/algorithms/utils/random';
 
@@ -38,6 +39,9 @@ export default class Sorting extends React.Component {
   sortArrayInsertion () {
     this.setState((prevState) => ({ arrayTest: Insertion(prevState.arrayTest) }));
   }
+  sortArrayShell () {
+    this.setState((prevState) => ({ arrayTest: ShellShort(prevState.arrayTest) }));
+  }
   sortArrayQuick () {
     this.setState((prevState) => ({ arrayTest: Quick(prevState.arrayTest) }));
   }
@@ -57,6 +61,7 @@ export default class Sorting extends React.Component {
           <button type="button" onClick={ this.sortArrayBubble.bind(this) }>冒泡排序</button>
           <button type="button" onClick={ this.sortArraySelection.bind(this) }>选择排序</button>
           <button type="button" onClick={ this.sortArrayInsertion.bind(this) }>插入排序</button>
+          <button type="button" onClick={ this.sortArrayShell.bind(this) }>希尔排序</button>
           <button type="button" onClick={ this.sortArrayQuick.bind(this) }>快速排序</button>
         </form>
         <p className="demo-result">{ this.state.arrayTest.join() }</p>
