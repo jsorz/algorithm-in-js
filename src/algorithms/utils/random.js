@@ -1,3 +1,4 @@
+import swap from './swap';
 
 /**
  * 选取随机整数
@@ -62,4 +63,19 @@ export const randomArray = (length, config) => {
     }
   }
   return results;
+};
+
+/**
+ * 数组洗牌
+ * @param {Array} array
+ * @returns {Array} 乱序后的数组
+ */
+export const shuffle = (array) => {
+  let currentIndex = array.length;
+  while (currentIndex !== 0) {
+    const randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    swap(array, currentIndex, randomIndex);
+  }
+  return array;
 };
