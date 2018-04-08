@@ -32,6 +32,10 @@ export default class SortingPage extends React.Component {
     }));
   }
 
+  reverseArray() {
+    this.setState((prevState) => ({ arrayTest: prevState.arrayTest.reverse() }));
+  }
+
   sortArray(method) {
     const start = window.performance.now();
     const array = Sorting[method](this.state.arrayTest);
@@ -54,6 +58,7 @@ export default class SortingPage extends React.Component {
             <span>数组长度</span>
             <input type="text" value={ this.state.inputLength } onChange={ this.onchangeInput } />
             <button onClick={ this.shuffleArray.bind(this) }>产生随机数组</button>
+            <button onClick={ this.reverseArray.bind(this) }>reverse数组</button>
           </div>
           <button onClick={ this.sortArray.bind(this, 'BubbleSort') }>冒泡排序</button>
           <button onClick={ this.sortArray.bind(this, 'SelectionSort') }>选择排序</button>
@@ -62,6 +67,7 @@ export default class SortingPage extends React.Component {
           <button onClick={ this.sortArray.bind(this, 'MergeShort') }>归并排序</button>
           <button onClick={ this.sortArray.bind(this, 'QuickSort') }>快速排序</button>
           <button onClick={ this.sortArray.bind(this, 'HeapShort') }>堆排序</button>
+          <button onClick={ this.sortArray.bind(this, 'BucketSort') }>桶排序</button>
         </div>
         <p className="demo-result">time cost = { this.state.timeCost }</p>
         <p className="demo-result">{ this.state.arrayTest.join() }</p>

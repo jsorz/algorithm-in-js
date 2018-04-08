@@ -5,6 +5,7 @@ import ShellShort from './shell-sort';
 import MergeShort from './merge-sort';
 import QuickSort from './quick';
 import HeapShort from './heap-sort';
+import BucketSort from './bucket-sort';
 
 export default {
   BubbleSort,
@@ -13,5 +14,6 @@ export default {
   ShellShort,
   MergeShort,
   QuickSort,
-  HeapShort
+  HeapShort,
+  BucketSort
 };
