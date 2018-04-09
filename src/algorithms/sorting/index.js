@@ -6,6 +6,8 @@ import MergeShort from './merge-sort';
 import QuickSort from './quick';
 import HeapShort from './heap-sort';
 import BucketSort from './bucket-sort';
+import RadixSort from './radix-sort';
+import CountingSort from './counting-sort';
 
 export default {
   BubbleSort,
@@ -15,5 +17,7 @@ export default {
   MergeShort,
   QuickSort,
   HeapShort,
-  BucketSort
+  BucketSort,
+  RadixSort,
+  CountingSort
 };

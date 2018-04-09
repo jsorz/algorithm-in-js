@@ -68,6 +68,7 @@ export default class SortingPage extends React.Component {
           <button onClick={ this.sortArray.bind(this, 'QuickSort') }>快速排序</button>
           <button onClick={ this.sortArray.bind(this, 'HeapShort') }>堆排序</button>
           <button onClick={ this.sortArray.bind(this, 'BucketSort') }>桶排序</button>
+          <button onClick={ this.sortArray.bind(this, 'RadixSort') }>基数排序</button>
         </div>
         <p className="demo-result">time cost = { this.state.timeCost }</p>
         <p className="demo-result">{ this.state.arrayTest.join() }</p>
