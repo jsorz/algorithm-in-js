@@ -24,7 +24,7 @@ export const sortRecursive = (arr, compareFn = defaultCompare) => {
 // 使用遍历数组并交换，效率更高些
 const sortWithIndex = (arr, compareFn, left, right) => {
   if (left < right) {
-    // 以最左为主元
+    // 以最左为主元 (受原数组顺序影响较大)
     const pivot = arr[left];
     let low = left;
     let high = right;

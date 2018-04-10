@@ -10,6 +10,7 @@ const createBuckets = (array, bucketSize) => {
       maxValue = array[i];
     }
   }
+  // 分治思想
   const bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;
   const buckets = [];
   for (let i = 0; i < bucketCount; i++) {

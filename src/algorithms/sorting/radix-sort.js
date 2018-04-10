@@ -3,6 +3,7 @@ import { findMaxValue, findMinValue } from '../utils/search';
 const getBucketIndex = (value, minValue, significantDigit, radixBase) =>
   Math.floor(((value - minValue) / significantDigit) % radixBase);
 
+// radix sort 是 bucket sort 的延伸
 const countingSortForRadix = (array, radixBase, significantDigit, minValue) => {
   let bucketsIndex;
   const buckets = [];
@@ -28,7 +29,7 @@ const countingSortForRadix = (array, radixBase, significantDigit, minValue) => {
 };
 
 const radixSort = (array, radixBase = 10) => {
-  if (array.length < 2) {
+  if (array.length <= 1) {
     return array;
   }
   const minValue = findMinValue(array);
