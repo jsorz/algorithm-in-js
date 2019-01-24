@@ -21,6 +21,7 @@
   "repository": "todo",
   "license": "MIT",
   "dependencies": {
+    "@tensorflow/tfjs": "^0.10.3",
     "element-react": "^1.4.10",
     "element-theme-default": "^1.4.13",
     "react": "^16.2.0",
